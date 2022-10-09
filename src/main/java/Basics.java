@@ -100,7 +100,7 @@ public class Basics {
          * Current count: 0
          */
         for (int i = 10; i >= 0; i--){
-            System.out.println("Current count:" + i);
+            System.out.println("Current count: " + i);
                  }
 
     }
@@ -144,7 +144,7 @@ public class Basics {
          */
         StringBuilder ret = new StringBuilder();
         ret.append(to_split.charAt(0));
-        for (int i = 0; i <= to_split.length(); i++){
+        for (int i = 0; i < to_split.length(); i++){
             char ch1 = to_split.charAt(i);
             char ch2 = ' ';
             if(ch1 == ch2){
@@ -173,8 +173,9 @@ public class Basics {
     public static int oddSum(int[] arr) {
         int current_sum = 0;
         if(arr.length > 1){
-            for(int i = 0; i <= arr.length; i++){
-                current_sum = current_sum + arr[i];
+            for(int i = 0; i < arr.length; i++){
+                if(i % 2 != 0)
+                    current_sum = current_sum + arr[i];
             }
         }
         /* TODO (Task 5): Complete this method body using a for-loop.

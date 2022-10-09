@@ -145,7 +145,9 @@ public class Basics {
         StringBuilder ret = new StringBuilder();
         ret.append(to_split.charAt(0));
         for (int i = 0; i <= to_split.length(); i++){
-            if(to_split.charAt(i).equals(" ")){
+            char ch1 = to_split.charAt(i);
+            char ch2 = ' ';
+            if(ch1 == ch2){
                 ret.append(to_split.charAt(i+1));
             };
         }
